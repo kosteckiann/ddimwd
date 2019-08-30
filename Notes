@@ -3,5 +3,13 @@ The course also contains a section on GraphQL, a modern alternative to REST APIs
 
 Tools and Technologies
 GitHub
+Command line
 Visual Studio Code
 Node.js
+
+GIT
+To initialize a git repository in the root of the folder, run the git init command
+Create file: (Windows CP) type nul > FILENAME
+See which files git knows exist: git status
+To add file to staging (aka index) environment: git add FILENAME
+To commit: git commit
