@@ -13,3 +13,7 @@ Create file: (Windows CP) type nul > FILENAME
 See which files git knows exist: git status
 To add file to staging (aka index) environment: git add FILENAME
 To commit: git commit
+           git commit -m "message"
+To create a branch: git branch name
+To create a branch (and move to new branch): git checkout -b <my branch name>
+To list all branches: git branch -a
