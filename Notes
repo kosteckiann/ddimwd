@@ -1,11 +1,16 @@
 The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js. 
 The course also contains a section on GraphQL, a modern alternative to REST APIs.
 
+-------
+
 Tools and Technologies
 GitHub
 Command line
 Visual Studio Code
 Node.js
+React
+
+--------
 
 GIT
 To initialize a git repository in the root of the folder, run the git init command
@@ -28,3 +33,44 @@ To push a branch to GitHub: git push origin <yourbranchname>
 To get changes from GitHub to computer: git pull origin <branch>
 
 To see changes made: git log
+
+--------
+
+REACT
+To create app: npx creat-react-app <name>
+To run app: npm start
+Any JavaScript code within the curly braces is evaluated and the result of this 
+evaluation is embedded into the defined place in the HTML produced by the component.
+Compiling is handled by Babel
+JSX is muchl like HTML with the distinction that with JSX you can easily embed dynamic content
+by writing appropriate JS within curly braces.
+Every tag needs to be closed.  Example: <br />
+
+Component names must be capitalized
+component example:
+const Hello = () => {  
+   return (
+      <div>      
+         <p>Hello world</p>    
+      </div>  
+   )
+}
+const App = () => {
+   return (
+      <div>
+         <Hello />
+      </div>
+   )
+}
+
+props: passing data to components
+If the value of the prop is achieved using JS, it must be wrapped with curly braces
+
+--------
+
+JS
+arrow function expression: syntactically compact alternative to aregular function expression,
+although without its own bindings to the this, arguments, super, or new.target keywords
+Arrow functions are ill suited as methods, and they cannot be used as constructors
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
