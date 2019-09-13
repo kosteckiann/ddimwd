@@ -12,8 +12,19 @@ To initialize a git repository in the root of the folder, run the git init comma
 Create file: (Windows CP) type nul > FILENAME
 See which files git knows exist: git status
 To add file to staging (aka index) environment: git add FILENAME
+To add all files: git add -A
 To commit: git commit
            git commit -m "message"
 To create a branch: git branch name
 To create a branch (and move to new branch): git checkout -b <my branch name>
 To list all branches: git branch -a
+
+(FROM GITHUB AFTER CREATING A NEW REPO)
+…or push an existing repository from the command line
+git remote add origin https://github.com/kosteckiann/ddMD.git
+git push -u origin master
+
+To push a branch to GitHub: git push origin <yourbranchname>
+To get changes from GitHub to computer: git pull origin <branch>
+
+To see changes made: git log
