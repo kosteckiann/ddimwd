@@ -63,8 +63,56 @@ const App = () => {
    )
 }
 
+
+
 props: passing data to components
 If the value of the prop is achieved using JS, it must be wrapped with curly braces
+
+
+
+Ways to destruct:
+const Hello = (props) => {
+  const name = props.name  
+  const age = props.age
+  
+  const { name, age } = props
+  
+const Hello = ({ name, age }) => {
+
+
+
+stateful component: 
+import React, { useState } from 'react'import ReactDOM from 'react-dom'
+
+const App = (props) => {
+  //function call adds state to the component and renders it initialized with the value of zero
+  //function returns an array that contains two items, assign items to vars counter and setCounter
+  //counter is assigned initial value, which is 0
+  //setCounter is assigned function that will be used to modify the state
+  const [ counter, setCounter ] = useState(0)
+  
+  //two parameters: function to increment counter state and timeout of one second
+  //function passed as first parameter is invoked 1 second after calling setTimeout function
+  //when setCounter is called, React re-renders the component
+  //every time setCounter modifies the state, it causes the component to re-render  *************
+  setTimeout(    () => setCounter(counter + 1),    1000  )
+  return (
+    <div>{counter}</div>
+  )
+}
+
+ReactDOM.render(
+  <App />, 
+  document.getElementById('root')
+)
+
+
+
+Best practice: lift the state up as high as possible in the component hierarchy,
+preferably to the App root component
+
+
+
 
 --------
 
