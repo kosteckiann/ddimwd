@@ -111,7 +111,19 @@ ReactDOM.render(
 Best practice: lift the state up as high as possible in the component hierarchy,
 preferably to the App root component
 
+object spread syntax: ...
+{...clicks} creates a new object that has copies of all the properties of the clicks object
+When we add new properties to the object, e.g. {...clicks, right: 1}, the value of the right
+property in the new object will be 1
+It is forbidden in React to mutate state directly - example: can't do clicks.left++
+Changing the state has to always be done by setting the state to a new object
 
+useState and useEffect must not be called from inside of a loop, conditional expression, or
+any place that is not a function defining a component.
+This is done to ensure that hooks are always called in the same order
+
+
+Event handlers must always be a function or a reference to a function
 
 
 --------
